@@ -1,0 +1,54 @@
+using System;
+using System.Runtime.InteropServices;
+
+namespace miad
+{
+    class Test1
+    {
+        public static void Main()
+        {
+            
+            Console.WriteLine("Please Enter Number A & B :");
+
+            Console.Write("A  = ");
+
+
+
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("B  = ");
+            int b = Convert.ToInt32(Console.ReadLine());
+           
+            
+            
+            kmm(a, b);
+            bmm(a, b);
+        }
+        private static void kmm(int a, int b)
+        {
+            int temp = 1;
+            for (int i = 1; i <= a && i <= b; i++)
+            {
+                if (a % i == 0 && b % i == 0)
+                {
+                    temp = i;
+                }
+            }
+            int kmm = (a * b) / temp;
+            Console.WriteLine("K M M is = {0}", kmm);
+        }
+        private static void bmm(int a, int b)
+        {
+            int temp = 1;
+            for (int i = 1; i <= a && i <= b; i++)
+            {
+                if (a % i == 0 && b % i == 0)
+                {
+                    temp = i;
+                }
+            }
+            /*miadnzr*/
+            Console.WriteLine("B M M is = {0}", temp);
+            Console.ReadKey();
+        }
+    }
+}
